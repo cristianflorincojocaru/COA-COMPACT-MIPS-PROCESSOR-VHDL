@@ -1,3 +1,0 @@
-MODULE tb_mips
-SUBMODULE Ceva
-INSTANCE UUT
