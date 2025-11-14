@@ -1,1 +1,1 @@
-# Computer Organization and Architecture - 
+# Computer Organization and Architecture - COMPACT MIPS PROCESSOR VHDL
