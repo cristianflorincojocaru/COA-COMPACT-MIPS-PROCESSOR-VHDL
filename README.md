@@ -57,6 +57,28 @@ This reduced ISA maintains complete functional capability without unnecessary co
 
 ---
 
+## Example Program
+
+Below is an example instruction sequence used for testing ALU operations, memory access, and branching logic.  
+This program performs arithmetic and logical operations on two input words and stores the results back to memory, looping indefinitely:
+
+```assembly
+rep:
+  lw  $2, 0x40($0)   # INW0 = 0xAAAA_AAAB
+  lw  $3, 0x44($0)   # INW1 = 0x5555_5555
+  add $4, $2, $3
+  sub $5, $2, $3
+  and $6, $2, $3
+  or  $7, $2, $3
+  sw  $2, 0x48($0)
+  sw  $3, 0x48($0)
+  sw  $4, 0x48($0)
+  sw  $5, 0x48($0)
+  sw  $6, 0x48($0)
+  sw  $7, 0x48($0)
+  beq $2, $3, rep   # no branch (values differ)
+  beq $0, $0, rep   # branch to rep (infinite loop)
+
 ## Simulation and Testing
 
 Simulation can be performed using ModelSim, GHDL, or Vivado Simulator.  
