@@ -1,8 +1,9 @@
 # Computer Organization and Architecture - COMPACT MIPS PROCESSOR VHDL
 
 An educational project that implements a **compact MIPS processor** in **VHDL**, focused on **simplicity**, **modularity**, and **efficient hardware resource usage**. The project provides a **clear architecture** that is easy to understand and extend, making it ideal for *Computer Organization and Architecture* courses as well as **FPGA experimentation**.
+> [!NOTE]  
+> This design represents a **reduced version of the MIPS processor**, built to highlight the **essential functional elements of a real CPU** while removing **additional complexity** that may hinder understanding of **fundamental architectural concepts**.
 
-This design represents a **reduced version of the MIPS processor**, built to highlight the **essential functional elements of a real CPU** while removing **additional complexity** that may hinder understanding of **fundamental architectural concepts**.
 
 
 ## PROJECT OBJECTIVE
@@ -11,11 +12,7 @@ The main goal is the construction of a **clear and compact processor** with a **
 - **FPGA synthesis and implementation**  
 - understanding how **MIPS instructions** are translated into **low-level hardware execution**
 
-Compared to other implementations, this project aims for :  
-- a design **easy to follow and modify**  
-- **reduced resource consumption**  
-- emphasis on **architectural clarity**
-
+Compared to other implementations, this project aims for a design that is **easy to follow and modify**, **reduces resource consumption**, and places an emphasis on **architectural clarity**.
 
 
 
@@ -23,31 +20,28 @@ Compared to other implementations, this project aims for :
 The processor follows a simplified **non-pipelined model**, executing an instruction through **multiple logical phases** within a **single extended cycle**. The architecture is based on a **clean separation of modules** :
 
 ### MAIN MODULES
-| MODULE | DESCRIPTION |
-|:------------------------------:   |:-----------------------------------:	    |
-|     **ALU**          | performs **arithmetic and logical operations** |
-| **REGISTER FILE** | **32 general-purpose registers** |
-| **CONTROL UNIT** | **decodes instructions** and generates **control signals** |
-| **INSTRUCTION MEMORY** | **read-only instruction storage (ROM)** |
-| **DATA MEMORY** | memory accessible through **load / store instructions** |
-| **PROGRAM COUNTER** | controls the **sequencing of instruction execution** |
+|                MODULE                |                                                DESCRIPTION |
+|   :------------------------------:   |                   :-----------------------------------:	  |
+|                **ALU**               |             performs **arithmetic and logical operations** |
+|            **REGISTER FILE**         |                           **32 general-purpose registers** |
+|            **CONTROL UNIT**          | **decodes instructions** and generates **control signals** |
+|          **INSTRUCTION MEMORY**      |                    **read-only instruction storage (ROM)** |
+|             **DATA MEMORY**          |    memory accessible through **load / store instructions** |
+|           **PROGRAM COUNTER**        |       controls the **sequencing of instruction execution** |
 
-The datapath is built using a **Harvard-like model**, clearly separating **instruction memory** and **data memory** to provide **predictable behavior** and **simplified internal logic**.
+> [!IMPORTANT]
+> The datapath is built using a **Harvard-like model**, clearly separating **instruction memory** and **data memory** to provide **predictable behavior** and **simplified internal logic**.
 
 
 
 ## SUPPORTED INSTRUCTION SET
-The processor implements a relevant subset of the **MIPS ISA**:
+The processor implements a relevant subset of the **MIPS ISA** :
 
-### ARITHMETIC / LOGICAL INSTRUCTIONS
-- **`ADD`**, **`SUB`**, **`AND`**, **`OR`**, **`SLT`**
+- **ARITHMETIC / LOGICAL INSTRUCTIONS** - **`ADD`**, **`SUB`**, **`AND`**, **`OR`**, **`SLT`**
 
-### MEMORY INSTRUCTIONS
-- **`LW`**, **`SW`**
+- **MEMORY INSTRUCTIONS** - **`LW`**, **`SW`**
 
-### CONTROL-FLOW INSTRUCTIONS
-- **`BEQ`**, **`BNE`**  
-- **`J`** (planned future upgrade)
+- **CONTROL-FLOW INSTRUCTIONS** - **`BEQ`**, **`BNE`**  & **`J`** (planned future upgrade)
 
 This **reduced ISA** maintains **complete functional capability** without **unnecessary complexity** and supports **good performance** on **minimal hardware configurations**.
 
@@ -79,18 +73,18 @@ rep:
 **Simulation** can be performed using **ModelSim**, **GHDL**, or **Vivado Simulator**. The **testbenches** include **execution examples** based on **real MIPS instruction sequences**.
 
 ### EXAMPLE TEST PROGRAMS :
-- **Register increment and decrement**
-- **Copying and manipulating values in memory**
-- **Loop implementation** using **`BEQ`** or **`BNE`**
+- **register increment and decrement**
+- **copying and manipulating values in memory**
+- **loop implementation** using **`BEQ`** or **`BNE`**
 
 The purpose of testing is to **verify signal accuracy** at each stage and **validate correct control-flow behavior**.
 
-## FUTURE DEVELOPMENT DIRECTIONS
+## POSSIBLE ENHANCEMENTS AND DEVELOPMENT DIRECTIONS
 
-- Implementation of a **5-stage pipeline** and **hazard-handling mechanisms**  
-- Adding **additional instructions** (**`JAL`**, **`JR`**, **`MULT`**, **`DIV`**)  
-- Introducing a **simple cache** for **improved performance**  
-- Publishing a **minimal compatible assembler**
+- implementation of a **5-stage pipeline** and **hazard-handling mechanisms**  
+- adding **additional instructions** (**`JAL`**, **`JR`**, **`MULT`**, **`DIV`**)  
+- introducing a **simple cache** for **improved performance**  
+- publishing a **minimal compatible assembler**
 
 
 
@@ -99,8 +93,8 @@ The purpose of testing is to **verify signal accuracy** at each stage and **vali
 The project is developed based on **personal academic experience** and **reference materials**, taking **inspiration** and **comparison** from other **open-source implementations** such as :  
 - *MIPS Reduced Processor* — used as **structural** and **organizational reference**  
 - *Computer Organization and Design* — **Hennessy & Patterson**
-
-The project was **adapted** and **restructured** for a **more compact architecture** and a **clearer educational approach**.
+> [!NOTE]  
+>The project was **adapted** and **restructured** for a **more compact architecture** and a **clearer educational approach**.
 
 
 ## CONTRIBUTIONS 
