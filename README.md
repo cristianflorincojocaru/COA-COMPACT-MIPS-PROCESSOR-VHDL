@@ -96,7 +96,7 @@ The purpose of testing is to **verify signal accuracy** at each stage and **vali
 
 ## RESOURCES AND INSPIRATION
 
-The project is developed based on **personal academic experience** and **reference materials**, taking **inspiration** and **comparison** from other **open-source implementations** such as:  
+The project is developed based on **personal academic experience** and **reference materials**, taking **inspiration** and **comparison** from other **open-source implementations** such as :  
 - *MIPS Reduced Processor* — used as **structural** and **organizational reference**  
 - *Computer Organization and Design* — **Hennessy & Patterson**
 
@@ -105,8 +105,7 @@ The project was **adapted** and **restructured** for a **more compact architectu
 
 ## CONTRIBUTIONS
 
-Project created by **Cristian Florin Cojocaru** (**CSE.2** — **University of Craiova / Faculty of Automatics, Computer Science and Electronics**).  
-Contributions are welcome! If you have suggestions for improving the code or documentation, please submit a pull request.
+Project created by **Cristian Florin Cojocaru** (**CSE.2** — **University of Craiova / Faculty of Automatics, Computer Science and Electronics**). Contributions are welcome! If you have suggestions for improving the code or documentation, please submit a pull request.
 
 
 ## LICENSE
