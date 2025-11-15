@@ -58,7 +58,7 @@ This reduced ISA maintains complete functional capability without unnecessary co
 ---
 
 ##  Example Program
-
+This example program tests the main functional units of the processor. It loads two test values from memory, performs arithmetic and logical operations on them, stores the results back into memory, and finally uses branch instructions to verify the control unit. The infinite loop at the end allows continuous execution for simulation waveform inspection.
 ```asm
 rep:
   lw $2, 0x40($0)   # INW0 = 0xAAAA_AAAB
